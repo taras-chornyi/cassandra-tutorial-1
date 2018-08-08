@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    api 'org.apache.commons:commons-math3:3.6.1'
+    api 'com.datastax.cassandra:cassandra-driver-core:3.1.2'
+
+    api 'org.slf4j:slf4j-api:1.7.25'
+    api group: 'ch.qos.logback', name:'logback-classic', version: '1.0.9'
+    api group: 'ch.qos.logback', name:'logback-core', version: '1.0.9'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.0'
+    compileOnly 'org.projectlombok:lombok:1.18.0'
+    
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.cassandraunit:cassandra-unit:3.0.0.1'
+}
+
+repositories {
+    jcenter()
+}
